@@ -65,34 +65,47 @@ body {
     top: 0;
     width: 100%;
     display: flex;
-    justify-content: flex-end;
-    background-color: #333;
-    padding: 10px;
+    justify-content: space-between; /* Space logo and profile icon apart */
+    align-items: center;
+    background-color: #333; /* Dark background for the header */
+    padding: 10px 20px; /* Add padding for spacing */
     z-index: 10;
+}
+
+/* Logo Styling */
+.logo {
+    font-family: "Arial Rounded MT Bold", Arial, sans-serif; /* Use modern font */
+    font-size: 24px; /* Font size for the logo */
+    color: #ffffff; /* White text */
+    text-transform: uppercase; /* Make the text uppercase */
+    cursor: default; /* No pointer cursor on hover */
 }
 
 /* Profile Icon Container */
 .profile-icon-container {
-    position: relative; /* Allows positioning of the dropdown */
+    position: relative; /* Allows dropdown menu positioning */
+    display: flex;
+    align-items: center; /* Vertically align profile icon */
 }
 
 /* Profile Icon Styling */
 .profile-icon {
-    width: 40px;
-    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #444;
+    width: 40px;
+    height: 40px;
+    background-color: #444; /* Background for the profile icon */
     border-radius: 50%;
     cursor: pointer;
 }
 
 .profile-icon svg {
-    fill: #ffffff;
+    fill: #ffffff; /* White SVG icon */
     width: 24px;
     height: 24px;
 }
+
 
 /* Dropdown Menu Styling */
 .dropdown-menu {
