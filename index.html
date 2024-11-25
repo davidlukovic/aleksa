@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EO!</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header with Profile Icon -->
+    <header class="header">
+        <div class="profile-icon-container">
+            <!-- Profile Icon -->
+            <div class="profile-icon" id="profile-icon">
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    width="35"
+                    height="35"
+                >
+                    <circle cx="12" cy="8" r="4" fill="#ffffff" />
+                    <path
+                        d="M12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z"
+                        fill="#ffffff"
+                    />
+                </svg>
+            </div>
+
+            <!-- Dropdown Menu -->
+            <ul class="dropdown-menu" id="profile-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Settings</a></li>
+                <li><a href="#">Language</a></li>
+                <li><a href="#">Billing and Payments</a></li>
+                <li><a href="#">Help & Support</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Main Content Area -->
+    <main class="main">
+        <!-- Chat Box Section -->
+        <div class="chat-box">
+            <input 
+                type="text" 
+                id="search-box" 
+                placeholder="How can I help you today?" 
+                onfocus="clearPlaceholder()"
+                onblur="restorePlaceholder()"
+            >
+        </div>
+    </main>
+
+    <!-- Include Script -->
+    <script src="script.js"></script>
+</body>
+</html>

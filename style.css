@@ -1,0 +1,135 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main Content Styling */
+.main {
+    margin-top: 70px; /* Account for fixed header */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+/* Chat Box Styling */
+.chat-box {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    width: 100%;
+    padding: 20px;
+    height: auto;
+}
+
+#search-box {
+    box-sizing: border-box; /* Include padding and border in width */
+    width: 100%;
+    max-width: 450px; /* Ensure sufficient width */
+    padding: 15px 20px; /* Inner padding for text spacing */
+    font-size: 18px; /* Font size matches placeholder */
+    line-height: 1.5; /* Text alignment */
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    color: #000;
+    text-align: center;
+    white-space: nowrap; /* Prevent wrapping of placeholder text */
+    overflow: visible; /* Ensure placeholder text is not clipped */
+}
+
+/* Placeholder Text Styling */
+#search-box::placeholder {
+    color: #555;
+    font-style: italic;
+}
+
+
+/* Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #202123;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header Styling */
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #333;
+    padding: 10px;
+    z-index: 10;
+}
+
+/* Profile Icon Container */
+.profile-icon-container {
+    position: relative; /* Allows positioning of the dropdown */
+}
+
+/* Profile Icon Styling */
+.profile-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #444;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.profile-icon svg {
+    fill: #ffffff;
+    width: 24px;
+    height: 24px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    position: absolute;
+    top: 50px; /* Positions the menu below the profile icon */
+    right: 0; /* Aligns it to the right edge of the icon */
+    background-color: #333; /* Dark background to match app theme */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    list-style: none; /* Remove bullet points */
+    padding: 10px 0;
+    margin: 0;
+    display: none; /* Hidden by default */
+    z-index: 10;
+    min-width: 200px; /* Set a minimum width */
+    white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Dropdown Menu Items */
+.dropdown-menu li {
+    padding: 10px 20px; /* Space around the menu text */
+    text-align: left; /* Align text to the left */
+}
+
+.dropdown-menu li a {
+    text-decoration: none; /* Remove underline from links */
+    color: #fff; /* White text color */
+    font-size: 16px; /* Text size */
+    display: block; /* Make the link fill the entire menu item */
+}
+
+.dropdown-menu li:hover {
+    background-color: #444; /* Highlight the item on hover */
+    cursor: pointer; /* Show pointer cursor */
+}
+
+/* Dropdown Menu When Open */
+.dropdown-menu.open {
+    display: block; /* Show the menu */
+}
