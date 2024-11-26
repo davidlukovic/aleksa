@@ -5,48 +5,6 @@
     box-sizing: border-box;
 }
 
-/* Main Content Styling */
-.main {
-    margin-top: 70px; /* Account for fixed header */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
-}
-
-/* Chat Box Styling */
-.chat-box {
-    display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    width: 100%;
-    padding: 20px;
-    height: auto;
-}
-
-#search-box {
-    box-sizing: border-box; /* Include padding and border in width */
-    width: 100%;
-    max-width: 450px; /* Ensure sufficient width */
-    padding: 15px 20px; /* Inner padding for text spacing */
-    font-size: 18px; /* Font size matches placeholder */
-    line-height: 1.5; /* Text alignment */
-    border: none;
-    border-radius: 25px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
-    color: #000;
-    text-align: center;
-    white-space: nowrap; /* Prevent wrapping of placeholder text */
-    overflow: visible; /* Ensure placeholder text is not clipped */
-}
-
-/* Placeholder Text Styling */
-#search-box::placeholder {
-    color: #555;
-    font-style: italic;
-}
-
-
 /* Body Styling */
 body {
     font-family: Arial, sans-serif;
@@ -106,7 +64,6 @@ body {
     height: 24px;
 }
 
-
 /* Dropdown Menu Styling */
 .dropdown-menu {
     position: absolute;
@@ -145,4 +102,97 @@ body {
 /* Dropdown Menu When Open */
 .dropdown-menu.open {
     display: block; /* Show the menu */
+}
+
+/* Main Content Styling */
+.main {
+    margin-top: 70px; /* Account for fixed header */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+/* Chat Box Styling */
+.chat-box {
+    display: flex;
+    align-items: center; /* Align search box and button vertically */
+    gap: 10px; /* Space between search box and button */
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    justify-content: center; /* Center the content horizontally */
+}
+
+/* Search Box Styling */
+#search-box {
+    flex: 1;
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3);
+    color: #000;
+    text-align: center;
+}
+
+/* Send Button Styling */
+#send-button {
+    padding: 15px 20px;
+    font-size: 18px;
+    border: none;
+    border-radius: 25px;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+}
+
+/* Chat Response Styling */
+#chat-response {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #fff;
+    width: 100%;
+    max-width: 500px;
+    word-wrap: break-word;
+    overflow-y: auto;
+}
+
+/* Placeholder Text Styling */
+#search-box::placeholder {
+    color: #555;
+    font-style: italic;
+}
+
+/* Error Message Styling */
+.error-message {
+    color: #ff4d4d; /* Red color for error messages */
+}
+
+/* AI Response Styling */
+.ai-response {
+    color: #00bfff; /* Light blue for AI responses */
+    margin-bottom: 10px;
+}
+
+/* User Response Styling */
+.user-message {
+    color: #00ff00; /* Green for user messages */
+    margin-bottom: 5px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #search-box, #send-button {
+        font-size: 16px;
+    }
+
+    #chat-response {
+        font-size: 14px;
+    }
 }

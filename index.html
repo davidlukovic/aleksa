@@ -3,35 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EO!</title>
+    <title>EOApp</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="apple-touch-icon" href="logo.png"> <!-- Added for iPhone home screen icon -->
 </head>
 <body>
-    <!-- Header with Profile Icon -->
     <header class="header">
-        <!-- Logo in the top left corner -->
-        <div class="logo">
-            EO!
-        </div>
-    
-        <!-- Profile Icon in the top right corner -->
+        <!-- Logo -->
+        <div class="logo">EO!</div>
+
+        <!-- Profile Icon -->
         <div class="profile-icon-container">
             <div class="profile-icon" id="profile-icon">
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    width="35"
-                    height="35"
-                >
-                    <circle cx="12" cy="8" r="4" fill="#ffffff" />
-                    <path
-                        d="M12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z"
-                        fill="#ffffff"
-                    />
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="35" height="35">
+                    <circle cx="12" cy="8" r="4" fill="#ffffff"></circle>
+                    <path d="M12 14c-4.418 0-8 1.79-8 4v2h16v-2c0-2.21-3.582-4-8-4z" fill="#ffffff"></path>
                 </svg>
             </div>
-    
+
             <!-- Dropdown Menu -->
             <ul class="dropdown-menu" id="profile-menu">
                 <li><a href="#">Profile</a></li>
@@ -44,23 +33,15 @@
             </ul>
         </div>
     </header>
-    
 
-    <!-- Main Content Area -->
     <main class="main">
-        <!-- Chat Box Section -->
         <div class="chat-box">
-            <input 
-                type="text" 
-                id="search-box" 
-                placeholder="How can I help you today?" 
-                onfocus="clearPlaceholder()"
-                onblur="restorePlaceholder()"
-            >
+            <input type="text" id="search-box" placeholder="How can I help you today?">
+            <button id="send-button">Send</button>
         </div>
+        <div id="chat-response"></div> <!-- Container for dynamic responses -->
     </main>
 
-    <!-- Include Script -->
     <script src="script.js"></script>
 </body>
 </html>
