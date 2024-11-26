@@ -186,9 +186,16 @@ body {
     margin-bottom: 5px;
 }
 
-/* Mobile Responsiveness */
+/* Mobile Styles */
 @media (max-width: 768px) {
+    .chat-box {
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+
     #search-box, #send-button {
+        width: 100%;
         font-size: 16px;
     }
 
